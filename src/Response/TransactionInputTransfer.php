@@ -62,6 +62,6 @@ class TransactionInputTransfer implements TransactionInputInterface
      */
     public function wei(): string
     {
-        return number_format(BcMath::HexDec($this->amount), 0, '.', '');
+        return number_format(floatval(BcMath::HexDec($this->amount)), 0, '.', '');
     }
 }
